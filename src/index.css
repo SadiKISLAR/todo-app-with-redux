@@ -3,6 +3,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #af5b5e;
 }
 
 button {
@@ -420,4 +421,9 @@ meta,
 [property="todo"] .view:focus-within .toggle,
 [property="todo"] .view:focus-within button {
 	display: none !important;
+}
+h1{
+	text-align: center;
+	color: #af5b5e;
+	font-size:xx-large;
 }

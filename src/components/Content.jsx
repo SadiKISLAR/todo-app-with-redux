@@ -7,7 +7,7 @@ const Content = () => {
         <>
             <section className="main">
                 <input className="toggle-all" type="checkbox" />
-                <label htmlfor="toggle-all">
+                <label htmlFor="toggle-all">
                     Mark all as complete
                 </label>
 
