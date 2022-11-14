@@ -16,6 +16,7 @@ export const todosSlice = createSlice({
             }
 
         ],
+        activeFilter: 'all'
     },
     reducers: {
         addTodo: (state, action) => {

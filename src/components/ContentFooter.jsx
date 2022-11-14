@@ -5,7 +5,9 @@ const ContentFooter = () => {
 
     const items = useSelector((state) => state.todos.items);
     const itemsLeft = items.filter(item => !item.completed).length;
-    console.log(itemsLeft);
+
+    const activeFilter = useSelector((state) => state.todos.activeFilter);
+
     return (
         <footer className="footer">
             <span className="todo-count">
@@ -15,13 +17,13 @@ const ContentFooter = () => {
 
             <ul className="filters">
                 <li>
-                    <a href="#/" className="selected">All</a>
+                    <a href="#/" className={activeFilter === 'all' ? 'selected' : ''}>All</a>
                 </li>
                 <li>
-                    <a href="#/">Active</a>
+                    <a href="#/" className={activeFilter === 'active' ? 'selected' : ''}>Active</a>
                 </li>
                 <li>
-                    <a href="#/">Completed</a>
+                    <a href="#/" className={activeFilter === 'all' ? 'completed' : ''}>Completed</a>
                 </li>
             </ul>
 
