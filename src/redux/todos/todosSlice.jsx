@@ -48,7 +48,7 @@ export const selectFilteredTodos = (state) => {
         return state.todos.items;
     }
     return state.todos.items.filter((todo) =>
-        state.todos.activeFilter === 'active' ? todo.completed === false : todo.completede === true)
+        state.todos.activeFilter === 'active' ? todo.completed === false : todo.completed === true)
 }
 
 export const { addTodo, toggle, destroy, changeActiveFilter, clearCompleted } = todosSlice.actions;

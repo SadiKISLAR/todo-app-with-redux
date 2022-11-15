@@ -17,7 +17,7 @@ const TodoList = () => {
 
     return (
         <ul className="todo-list">
-            {filtered.map((item) => (
+            {filteredTodos.map((item) => (
                 <li key={item.id} className={item.completed ? 'completed' : ''}>
                     <div className="view">
                         <input
