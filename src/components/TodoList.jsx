@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggle, destroy } from '../redux/todos/todosSlice';
+import { toggle, destroy, selectTodos } from '../redux/todos/todosSlice';
 const TodoList = () => {
 
     let filtered = [];
 
     const dispatch = useDispatch();
-    const items = useSelector((state) => state.todos.items);
+    const items = useSelector(selectTodos);
     const activeFilter = useSelector((state) => state.todos.activeFilter);
     const handleDestroy = (id) => {
         if (window.confirm('Are you sure?')) {
